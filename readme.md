@@ -11,26 +11,33 @@ test_fs_nocpu builds a tree with no cpu nodes, and a father-son edge in the tree
 How to use:
 1. Navigate with the terminal in test_fs_cpu or test_fs_nocpu
 2. run the following commands:
-    make
-    sudo insmod test_fs.ko
-    var= && sudo mount -t test_fs ./image$var ./mount$var -o loop
+
+```    
+make
+sudo insmod test_fs.ko
+var= && sudo mount -t test_fs ./image$var ./mount$var -o loop
+```
 
 3. Use the terminal and ls, cd commands to navigate ./mount or the file explorer (e.g. nautilus).
 
 4. Unmount using the command:
-    sudo umount -l mount
+```
+sudo umount -l mount
+```
 
 5. Remove the module with:
-    sudo rmmod test_fs
+```
+sudo rmmod test_fs
+```
 
 Careful: after unmounting a certain directory, you need to mount on a different one afterwards.
 So if you want to mount multiple times, you would use commands such as:
-
-    var= && sudo mount -t test_fs ./image$var ./mount$var -o loop
-    var=1 && sudo mount -t test_fs ./image$var ./mount$var -o loop
-    var=2 && sudo mount -t test_fs ./image$var ./mount$var -o loop
-    var=3 && sudo mount -t test_fs ./image$var ./mount$var -o loop
-    var=4 && sudo mount -t test_fs ./image$var ./mount$var -o loop
-    etc
-
+```
+var= && sudo mount -t test_fs ./image$var ./mount$var -o loop
+var=1 && sudo mount -t test_fs ./image$var ./mount$var -o loop
+var=2 && sudo mount -t test_fs ./image$var ./mount$var -o loop
+var=3 && sudo mount -t test_fs ./image$var ./mount$var -o loop
+var=4 && sudo mount -t test_fs ./image$var ./mount$var -o loop
+etc
+```
 
